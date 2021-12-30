@@ -6,16 +6,6 @@ package;
  */
 
 class Main {
-    static public function binToDec(arr: Array<Int>): Int {
-        var num = 0;
-        for (i in 0...arr.length){
-            if (arr[i] == 1){
-                num += Std.int(Math.pow(2, arr.length-i-1));
-            }
-        }
-        return num;
-    }
-
     static public function main() {
         #if sys
         var content:String = sys.io.File.getContent('input.txt');
@@ -99,7 +89,7 @@ class Main {
             length++;
 
             for (i in 0...length){
-                board[cast vent.y1 + dY * i][cast vent.x1 + dX * i]++;
+                board[cast vent.x1 + dX * i][cast vent.y1 + dY * i]++;
             }
         }
 

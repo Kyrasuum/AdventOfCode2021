@@ -1,0 +1,7 @@
+-cp src
+-main Main
+-lib console.hx
+-lib thx.core
+-dce full
+-D no-deprecation-warnings
+--interp
